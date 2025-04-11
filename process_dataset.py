@@ -345,8 +345,8 @@ if __name__ == "__main__":
     if args.dataname:
         process_data(args.dataname)
     else:
-        for name in ['adult', 'default', 'shoppers', 'magic', 'beijing', 'news']:    
-            process_data(name)
+        # for name in ['adult', 'default', 'shoppers', 'magic', 'beijing', 'news']:    #todo revert?
+        process_data("adult")
 
         
 
