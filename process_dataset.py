@@ -163,6 +163,9 @@ def process_data(name):
         data_df = pd.read_excel(data_path, sheet_name='Data', header=1)
         data_df = data_df.drop('ID', axis=1)
 
+    elif info["file_type"] == "json":
+        data_df = pd.read_json(data_path)
+
     num_data = data_df.shape[0]
 
     column_names = info['column_names'] if info['column_names'] else data_df.columns.tolist()

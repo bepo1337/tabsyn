@@ -48,7 +48,8 @@ def main(args):
     idx_name_mapping = {int(key): value for key, value in idx_name_mapping.items()}
 
     syn_df.rename(columns = idx_name_mapping, inplace=True)
-    syn_df.to_csv(save_path, index = False)
+    # TODO reverGT?
+    syn_df.to_json(save_path, orient="records", index = False)
     
     end_time = time.time()
     print('Time:', end_time - start_time)
