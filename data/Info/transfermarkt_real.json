@@ -70,5 +70,5 @@
   ],
   "file_type": "json",
   "data_path": "data/transfermarkt_real/real_processed_excerpt.json",
-  "test_path": null
+  "test_path": "data/transfermarkt_real/real_processed_excerpt_dummy_test.json"
 }

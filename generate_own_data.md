@@ -8,7 +8,9 @@
 
 
 # Next steps
-- Use excerpt of real data
-- Create small preprocess script to fit it to the tabsyn dataset
-  - ie create dummy variable target
-- adapt the info file with the numerical and categorical values
+- Use excerpt of real data ✅
+- Create small preprocess script to fit it to the tabsyn dataset ✅
+  - ie create dummy variable target ✅
+- adapt the info file with the numerical and categorical values ✅
+- check if test data is used somewhere
+- train with real train data and create as many samples as are in there
