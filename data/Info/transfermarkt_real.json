@@ -1,5 +1,5 @@
 {
-  "name": "transfermarkt",
+  "name": "transfermarkt_real",
   "task_type": "binclass",
   "header": "infer",
   "column_names": [
@@ -69,6 +69,6 @@
     33
   ],
   "file_type": "json",
-  "data_path": "data/transfermarkt_real/real_processed_excerpt.json",
-  "test_path": "data/transfermarkt_real/real_processed_excerpt_dummy_test.json"
+  "data_path": "data/transfermarkt_real/real_data_train_processed.json",
+  "test_path": "data/transfermarkt_real/real_data_train_processed.json"
 }

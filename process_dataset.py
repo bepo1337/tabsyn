@@ -146,7 +146,7 @@ def train_val_test_split(data_df, cat_columns, num_train = 0, num_test = 0):
 
 
 def process_data(name):
-
+    print("start of process_data")
     if name == 'news':
         preprocess_news()
     elif name == 'beijing':
@@ -180,6 +180,7 @@ def process_data(name):
     cat_columns = [column_names[i] for i in cat_col_idx]
     target_columns = [column_names[i] for i in target_col_idx]
 
+    print("before info test path")
     if info['test_path']:
 
         # if testing data is given
@@ -194,12 +195,12 @@ def process_data(name):
                         save_line = line.strip('\n').strip('.')
                         f1.write(f'{save_line}\n')
 
-        test_df = pd.read_csv(test_save_path, header = None)
+        test_df = pd.read_json(test_path) #todo revert?
         train_df = data_df
 
     else:  
         # Train/ Test Split, 90% Training, 10% Testing (Validation set will be selected from Training set)
-
+        print("in else clause for test split")
         num_train = int(num_data*0.9)
         num_test = num_data - num_train
 
