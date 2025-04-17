@@ -1,3 +1,9 @@
 .venv/
 .idea/
 data/adult
+*.npy
+*.csv
+*.pt
+*.zip
+*.names
+*.data

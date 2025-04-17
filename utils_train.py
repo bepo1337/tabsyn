@@ -22,7 +22,7 @@ class TabularDataset(Dataset):
         return self.X_num.shape[0]
 
 def preprocess(dataset_path, task_type = 'binclass', inverse = False, cat_encoding = None, concat = True):
-    
+    # TODO here validation?
     T_dict = {}
 
     T_dict['normalization'] = "quantile"

@@ -89,6 +89,7 @@ def main(args):
     X_train_num, _ = X_num
     X_train_cat, _ = X_cat
 
+    #TODO for now it looks like the "test" data is the validation data
     X_train_num, X_test_num = X_num
     X_train_cat, X_test_cat = X_cat
 
@@ -172,6 +173,7 @@ def main(args):
         with torch.no_grad():
             Recon_X_num, Recon_X_cat, mu_z, std_z = model(X_test_num, X_test_cat)
 
+            # TODO This val should be from the test set?
             val_mse_loss, val_ce_loss, val_kl_loss, val_acc = compute_loss(X_test_num, X_test_cat, Recon_X_num, Recon_X_cat, mu_z, std_z)
             val_loss = val_mse_loss.item() * 0 + val_ce_loss.item()    
 

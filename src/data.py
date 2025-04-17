@@ -681,6 +681,7 @@ def read_pure_data(path, split='train'):
     return X_num, X_cat, y
 
 def read_changed_val(path, val_size=0.2):
+    print("in read_changed_val in data.py where validation data is loaded. Train test split is done here")
     path = Path(path)
     X_num_train, X_cat_train, y_train = read_pure_data(path, 'train')
     X_num_val, X_cat_val, y_val = read_pure_data(path, 'val')

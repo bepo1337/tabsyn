@@ -1,0 +1,26 @@
+{
+  "name": "tm_minimal",
+  "task_type": "binclass",
+  "header": "infer",
+  "column_names": [
+    "height",
+    "age",
+    "foot",
+    "league",
+    "international_competition",
+    "league_played_matches",
+    "target"
+  ],
+  "num_col_idx": [
+    0,1,5
+  ],
+  "cat_col_idx": [
+    2,3,4
+  ],
+  "target_col_idx": [
+    6
+  ],
+  "file_type": "json",
+  "data_path": "data/tm_minimal/train_split.json",
+  "test_path": "data/tm_minimal/test_split.json"
+}
