@@ -6,6 +6,11 @@
 - Train TabSyn `python3 main.py --dataname transfermarkt --method tabsyn --mode train`
 - Synthesize new samples: `python3 main.py --dataname transfermarkt --method tabsyn --mode sample --save_path=tm_samples.json`
 
+# Above also working with `tm_full` as example for the real data set with converted categorical values 
+- For this the test data set had to be converted in parts
+  - splitting the dataset in `debug/build_minimal_df.ipynb`
+  - Converting the categoricla values afterwards in `pre_post_processing_custom/preprocess_categorical_cols.ipynb`
+  - Then run the things from how to generate data and it should be fine to import in 
 
 # Next steps
 - Use excerpt of real data ✅
@@ -13,14 +18,5 @@
   - ie create dummy variable target ✅
 - adapt the info file with the numerical and categorical values ✅
 - check if test data is used somewhere ✅
-- is test set used as val in training?
-- set if validation set exists
-- train with minimal dataset that only contains few columns that everybody has: league, international competition, performance data and check if that works with the trainig
-- 
-- training without player id, name, last name, pseudonym to ensure that 
-- maybe just train 
-- add test data and add this to the path after pre processing it
-- train with real train data and create as many samples as are in there
 
 
-# Check if Validation set exists
