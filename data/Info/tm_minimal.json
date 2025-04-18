@@ -9,18 +9,19 @@
     "league",
     "international_competition",
     "league_played_matches",
+    "coach",
     "target"
   ],
   "num_col_idx": [
     0,1,5
   ],
   "cat_col_idx": [
-    2,3,4
+    2,3,4,6
   ],
   "target_col_idx": [
-    6
+    7
   ],
   "file_type": "json",
   "data_path": "data/tm_minimal/train_split.json",
-  "test_path": "data/tm_minimal/test_split.json"
+  "test_path": "data/tm_minimal/test_split_no_new_categories.json"
 }

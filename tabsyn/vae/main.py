@@ -37,13 +37,6 @@ def compute_loss(X_num, X_cat, Recon_X_num, Recon_X_cat, mu_z, logvar_z):
 
     for idx, x_cat in enumerate(Recon_X_cat):
         if x_cat is not None:
-            print(f"idx: {idx}")
-            print(f"x_cat.shape: {x_cat.shape}")
-            print(f"x_cat.size(1): {x_cat.size(1)}")
-            print(f"X_cat[:, idx].max(): {X_cat[:, idx].max().item()}")
-            print(f"X_cat[:, idx].shape: {X_cat[:, idx].shape}")
-            print(f"Recon_X_cat idx: {len(Recon_X_cat)}")
-
             ce_loss += ce_loss_fn(x_cat, X_cat[:, idx])
             x_hat = x_cat.argmax(dim = -1)
         acc += (x_hat == X_cat[:,idx]).float().sum()
@@ -89,7 +82,7 @@ def main(args):
     X_train_num, _ = X_num
     X_train_cat, _ = X_cat
 
-    #TODO for now it looks like the "test" data is the validation data
+    #TODO X_train have the size of the training data and X_test of the test data set. So this seems to be the validation set and no separate set
     X_train_num, X_test_num = X_num
     X_train_cat, X_test_cat = X_cat
 
