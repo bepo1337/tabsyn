@@ -34,7 +34,7 @@ def main(args):
     start_time = time.time()
 
     # num_samples = train_z.shape[0] #TODO chagnge here for changing number of samples
-    num_samples = 10
+    num_samples = 49693 #TODO set custom
     sample_dim = in_dim
 
     x_next = sample(model.denoise_fn_D, num_samples, sample_dim)

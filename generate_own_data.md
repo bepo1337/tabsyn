@@ -7,7 +7,7 @@
 - Train TabSyn `python3 main.py --dataname DATASET_NAME --method tabsyn --mode train`
 - Synthesize new samples: `python3 main.py --dataname DATASET_NAME --method tabsyn --mode sample --save_path=tm_samples.json`
 
-# Above also working with `tm_full` as example for the real data set with converted categorical values 
+# Above also working with `tm_full` as example for the real data set with converted categorical values (DEPRECATED)
 - For this the test data set had to be converted in parts
   - splitting the dataset in `debug/build_minimal_df.ipynb`
   - Converting the categoricla values afterwards in `pre_post_processing_custom/preprocess_categorical_cols.ipynb`

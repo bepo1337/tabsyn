@@ -40,7 +40,7 @@ def main(args):
         num_workers = 4,
     )
 
-    num_epochs = 10 #todo revert after playign with toy dataset
+    num_epochs = 10_000 +1 #todo revert after playign with toy dataset
 
     denoise_fn = MLPDiffusion(in_dim, 1024).to(device)
     print(denoise_fn)
