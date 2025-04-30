@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 
+
+###THIS WAS USED as an EXPERIMENT. THE FINAL SYNTHESIS WAS NOT DONE WITH THIS
+
 df_train = pd.read_json("../data/transfermarkt_real/real_data_train.json")
 df_test = pd.read_json("../data/transfermarkt_real/real_data_test.json")
 

@@ -33,8 +33,7 @@ def main(args):
     '''
     start_time = time.time()
 
-    # num_samples = train_z.shape[0] #TODO chagnge here for changing number of samples
-    num_samples = 49693 #TODO set custom
+    num_samples = 49693 #we ywant same number of samples as in train data from ground truth
     sample_dim = in_dim
 
     x_next = sample(model.denoise_fn_D, num_samples, sample_dim)
@@ -49,7 +48,6 @@ def main(args):
     idx_name_mapping = {int(key): value for key, value in idx_name_mapping.items()}
 
     syn_df.rename(columns = idx_name_mapping, inplace=True)
-    # TODO reverGT?
     syn_df.to_json(save_path, orient="records", index = False)
     
     end_time = time.time()

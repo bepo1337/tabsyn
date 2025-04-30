@@ -11,13 +11,6 @@
 - For this the test data set had to be converted in parts
   - splitting the dataset in `debug/build_minimal_df.ipynb`
   - Converting the categoricla values afterwards in `pre_post_processing_custom/preprocess_categorical_cols.ipynb`
-  - Then run the things from how to generate data and it should be fine to import in 
-
-# Next steps
-- Use excerpt of real data ✅
-- Create small preprocess script to fit it to the tabsyn dataset ✅
-  - ie create dummy variable target ✅
-- adapt the info file with the numerical and categorical values ✅
-- check if test data is used somewhere ✅
+  - Then run the things from how to generate data and it should be fine to import in
 
 

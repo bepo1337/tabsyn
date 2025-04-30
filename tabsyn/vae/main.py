@@ -82,7 +82,6 @@ def main(args):
     X_train_num, _ = X_num
     X_train_cat, _ = X_cat
 
-    #TODO X_train have the size of the training data and X_test of the test data set. So this seems to be the validation set and no separate set
     X_train_num, X_test_num = X_num
     X_train_cat, X_test_cat = X_cat
 
@@ -115,7 +114,7 @@ def main(args):
     optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WD)
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.95, patience=10, verbose=True)
 
-    num_epochs = 4000 # todo revert to 4000?
+    num_epochs = 4000 # todo change here for epochs bookmark
     best_train_loss = float('inf')
 
     current_lr = optimizer.param_groups[0]['lr']

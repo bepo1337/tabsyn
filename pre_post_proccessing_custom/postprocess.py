@@ -1,9 +1,10 @@
 import pandas as pd
 import numpy as np
 
+### THIS WAS USED IN EXPERIMENTAL, NOT THE FINAL SYNTHESIS
 
-df_train = pd.read_json("../data/transfermarkt_real/real_data_train.json") #TODO
-df_test = pd.read_json("../data/transfermarkt_real/real_data_test.json") #TODO
+df_train = pd.read_json("../data/transfermarkt_real/real_data_train.json")
+df_test = pd.read_json("../data/transfermarkt_real/real_data_test.json")
 
 
 df_train.drop('target', axis=1, inplace=True)
