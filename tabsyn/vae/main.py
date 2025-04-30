@@ -165,7 +165,6 @@ def main(args):
         with torch.no_grad():
             Recon_X_num, Recon_X_cat, mu_z, std_z = model(X_test_num, X_test_cat)
 
-            # TODO This val should be from the test set?
             val_mse_loss, val_ce_loss, val_kl_loss, val_acc = compute_loss(X_test_num, X_test_cat, Recon_X_num, Recon_X_cat, mu_z, std_z)
             val_loss = val_mse_loss.item() * 0 + val_ce_loss.item()    
 
